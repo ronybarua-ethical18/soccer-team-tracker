@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Teams from '../Teams/Teams';
-
+import './Home.css';
 const Home = () => {
     const [teams, setTeams] = useState([]);
 
@@ -13,13 +13,13 @@ const Home = () => {
             .catch(error => 'something went wrong')
     }, [])
     return (
-        <Container>
+        <Container className="bg-light p-5">
             <Row>
                 {
                     teams.map(team => {
-                    return <Col className="p-2" md={4} sm={6} xs={12}>
-                                <Teams key={team.idTeam} team={team}></Teams>
-                            </Col>
+                        return <Col className="p-2" md={4} sm={6} xs={12}>
+                            <Teams key={team.idTeam} team={team}></Teams>
+                        </Col>
                     })
                 }
             </Row>

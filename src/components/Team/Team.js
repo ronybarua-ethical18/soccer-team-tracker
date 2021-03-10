@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import SingleTeam from '../SingleTeam/SingleTeam';
 
@@ -12,7 +11,7 @@ const Team = () => {
         fetch(url)
             .then(response => response.json())
             .then(data => setTeams(data.teams));
-    }, [])
+    }, [TeamId])
     return (
         <div>
             {
