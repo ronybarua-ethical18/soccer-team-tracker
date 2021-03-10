@@ -9,6 +9,9 @@ This is a cool react app named [soccer team tracker]. The app provides some inte
 # Development tools
 1. VS Code Editor
 2. NodeJS javascript run machine
-3. JS programming language, ReactJS framework
+3. JS programming language, ReactJS library
 4. Some npm packages like react-bootstrap, font-awesome react-router and so on.
+
+# Live site link
+[https://soccer-team-tracker.netlify.app/]
 
