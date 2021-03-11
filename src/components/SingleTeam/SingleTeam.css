@@ -1,12 +1,16 @@
 .team-badge img {
-    height: 100px;
+    height: 150px;
+}
+
+.title {
+    color: rgba(24, 138, 141, 1);
 }
 
 .shade {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-image: linear-gradient(to right bottom, #afbbb08f, #b9c8c694, #cbd4d794, #dee1e491, #eeeeee8f);
 }
 
 .social-links a {
@@ -17,6 +21,10 @@
 .team-info {
     background-image: linear-gradient( 102.1deg, rgba(96, 221, 142, 1) 8.7%, rgba(24, 138, 141, 1) 88.1%);
     border-radius: 10px;
+}
+
+.team-banner {
+    height: 200px;
 }
 
 .icon {

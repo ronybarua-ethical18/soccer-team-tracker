@@ -24,22 +24,16 @@ const SingleTeam = (props) => {
 
     // conditionally rendering image 
     const handleImage = (gender) => {
-        if (gender === 'Male') {
-            return <img src="https://i.ibb.co/1T4xPS5/wp2569318.jpg" className="img-fluid w-100 rounded" alt="" />
-        }
-        else if (gender === 'Female') {
-            return <img src="https://i.ibb.co/HDBPrY6/female.png" className="img-fluid w-100" alt="" />
-        }
-        else {
-            return <img src="https://i.ibb.co/GsHGpb9/404.gif" className="img-fluid w-100" alt="" />
-        }
+        return gender === 'Male' ? <img src="https://i.ibb.co/1T4xPS5/wp2569318.jpg" className="img-fluid w-100 rounded" alt="" />
+             : gender === 'Female' ? <img src="https://i.ibb.co/HDBPrY6/female.png" className="img-fluid w-100" alt="" />
+             : <img src="https://i.ibb.co/GsHGpb9/404.gif" className="img-fluid w-100" alt="" />;
     }
     return (
-        <div>
+        <div className="bg-light">
             <Container>
                 <Row>
-                    <Col md={12}>
-                        <Card >
+                    <Col className="mb-3">
+                        <Card className="rounded">
                             <Card.Img src={strTeamBanner} className="team-banner" alt="Card image" />
                             <div className="shade shadow">
                                 <Card.ImgOverlay className="team-badge d-flex align-items-center justify-content-center">
@@ -49,10 +43,10 @@ const SingleTeam = (props) => {
                         </Card>
                     </Col>
                 </Row>
-                <Container className="bg-light p-5">
+                <Container className="p-2">
                     <Row>
-                        <Col className="text-left text-white  mb-4 table" md={6} xs={12}>
-                            <div className="p-3 border team-info">
+                        <Col className="text-left text-white mb-4 table" md={6} xs={12}>
+                            <div className="p-3 team-info">
                                 <h3>{strAlternate}</h3>
                                 <p><FontAwesomeIcon icon={faClock} className="mr-2"></FontAwesomeIcon> <b>Founded:</b> {intFormedYear}</p>
                                 <p><FontAwesomeIcon icon={faUsers} className="mr-2"></FontAwesomeIcon><b>Team:</b> {strTeam}</p>
@@ -70,8 +64,9 @@ const SingleTeam = (props) => {
                             </div>
                         </Col>
                     </Row>
-                    <Row className="bg-light">
-                        <Col className="text-justify">
+                    <Row>
+                        <Col className="text-justify mb-4">
+                            <h2 className="display-5 pseudo-title"><span className="title">Team</span> Description<hr /></h2>
                             <p>{strDescriptionEN}</p>
                             <div className="social-links text-center">
                                 <a href={'https://' + strFacebook} target="_blank "><FontAwesomeIcon icon={faFacebook} className="icon" spin></FontAwesomeIcon></a>

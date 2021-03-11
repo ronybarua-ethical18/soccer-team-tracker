@@ -7,6 +7,7 @@ import {
 import Banner from './components/Banner/Banner';
 import Home from './components/Home/Home';
 import Team from './components/Team/Team';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path="/team/:TeamId">
             <Team></Team>
+          </Route>
+          <Route path="*">
+            <ErrorPage></ErrorPage>
           </Route>
         </Switch>
       </Router>
