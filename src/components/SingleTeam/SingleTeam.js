@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import './SingleTeam.css';
 import { faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faClock, faUsers, faTransgenderAlt, faIgloo, faThumbtack } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faUsers, faFlag, faTransgenderAlt, faIgloo, faThumbtack } from '@fortawesome/free-solid-svg-icons';
 import { faFutbol } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const SingleTeam = (props) => {
@@ -14,6 +14,7 @@ const SingleTeam = (props) => {
         intFormedYear,
         strInstagram,
         strSport,
+        strCountry,
         strYoutube,
         strStadium,
         strStadiumLocation,
@@ -50,6 +51,7 @@ const SingleTeam = (props) => {
                                 <h3>{strAlternate}</h3>
                                 <p><FontAwesomeIcon icon={faClock} className="mr-2"></FontAwesomeIcon> <b>Founded:</b> {intFormedYear}</p>
                                 <p><FontAwesomeIcon icon={faUsers} className="mr-2"></FontAwesomeIcon><b>Team:</b> {strTeam}</p>
+                                <p><FontAwesomeIcon icon={faFlag} className="mr-2"></FontAwesomeIcon><b>Country:</b> {strCountry}</p>
                                 <p><FontAwesomeIcon icon={faFutbol} className="mr-2"></FontAwesomeIcon><b>Sport Type:</b> {strSport}</p>
                                 <p><FontAwesomeIcon icon={faTransgenderAlt} className="mr-2"></FontAwesomeIcon><b>Gender:</b> {strGender}</p>
                                 <p><FontAwesomeIcon icon={faIgloo} className="mr-2"></FontAwesomeIcon><b>Stadium:</b> {strStadium}</p>
